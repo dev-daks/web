@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intra day</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+   
+    
+</head>
+<body>
+    <nav id="navbar">
+        <div id="intra4">
+            <img src="../img/intra4.png" alt="intra day">
+
+        </div>
+<ul>
+    <li class="item"><a href="#" >Home</a></li>
+    <li class="item"><a href="./bank.html" >Bank Details</a></li>
+    <li class="item"><a href="./contact.html" >Contact Us</a></li>
+    <li class="item"><a href="./package.html" >Packages</a>
+   
+    </li>
+</ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">VIDYAWATI  FINANCE  CONSULTANCY</h1>
+        <h1>COMMODITY EXPERT</h1>
+        <p>1 call will change your life and will cover your loses</p>
+        <p>PAY AFTER PROFIT</p>
+        <p>You will definitly earn from here, CHALLENGING YOU!</p>
+        <p>Book Your Demo Now...</p>
+            <button class="btn"><a href="/contact.html">GET STARTED</a></button>
+           
+            
+             
+            
+    </section>
+    <section id="services-contianer">
+        <h1 class="h-primary center"></h1>
+        <div id="services">
+            <div class="box">
+                
+                <h1>WORK WITH RESEARCH ANALYST</h1>
+                <p>Compliance Person Name: Arun Shah</p>
+                <p>Compliance Person Mobile Number: +919792444373</p>
+                <p>Company Name:Vidywati Finance Consultancy</p>
+                <p>Compliance Email:VFXsolution922@gmail.com</p>
+                <p>Sales email:VFXsolution922@gmail.com</p>
+                <p>Office Address:Rupa Solitaire,Navi Mumbai,Maharastra.</p>
+            </div>
+        </div>
+    </section>
+    
+ <section id="contact">
+    <h1 class="h-primary center">Fill Form</h1>
+    <div id="contact-box">
+        <form
+        id = "form"
+        class = "mx-auto my-5 shadow p-2"
+        method = "POST"
+    >
+    <!-- action= will be set by javascript -->
+        <div class="mb-1 d-flex">
+            <label class="mx-3" for="name">Name</label>
+            <input
+                type="text"
+                class="mx-3 form-control"
+                id="name"
+                name="Name"
+                list="names"
+            />
+            <datalist id="names">
+                <!-- javascript will add options here -->
+            </datalist>
+        </div>
+        <div class="mb-1 d-flex">
+            <label class="mx-3" for="email">Email</label>
+            <input
+                type="email"
+                class="mx-3 form-control"
+                id="email"
+                name="Email"
+                list="emails"
+            />
+            <datalist id="emails">
+                <!-- javascript will add options here -->
+            </datalist>
+        </div>
+        <div class="mb-1 d-flex">
+            <label class="mx-3" for="phone">Phone</label>
+            <input
+                type="number"
+                class="mx-3 form-control"
+                id="phone"
+                name="Phone"
+                list="phones"
+            />
+            <datalist id="phones">
+                <!-- javascript will add options here -->                
+            </datalist>
+        </div>
+        <div class="mb-1 d-flex">
+            <label class="mx-3" for="message">Message</label>
+            <input
+                type="text"
+                class="mx-3 form-control"
+                id="message"
+                name="Message"
+            />
+            <datalist id="messages">
+                <!-- javascript will add options here -->
+            </datalist>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button >
+        
+        
+    </form>
+    </div>
+</section>
+
+
+
+    <section id="client-section">
+       
+        <div id="clients">
+            <div class="client-item">
+                <ul>
+                    <li class="item"><a href="./contact.html">Fill form</a></li>
+                    <li class="item"><a href="./standard.html">Standard Do's & Don'ts</a></li>
+                    <li class="item"><a href="./refund.html">Refund Policy</a></li>
+                    <li class="item"><a href="./privacy.html">Privacy Policy</a></li>
+                </ul>
+                <ul>
+                    <li class="item"><a href="./term.html">Terms & Conditions</a></li>
+                    <li class="item"><a href="./consent.html">User Consent</a></li>
+                    <li class="item"><a href="./disclaimer.html">Legal Disclaimer</a></li>
+                    <li class="item"><a href="./contact.html">Contact Us</a></li>
+                </ul>
+                <ul>
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="./investor.html">Investor Charter</a></li>
+                    <li class="item"><a href="./bank.html">Bank Details</a></li>
+                    <li class="item"><a href="./package.html">Packages</a></li>
+                </ul>
+                
+                
+
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.VidyawatiFinanceConsultancy.com. All rights reserved!
+    
+        </div>
+    </footer>
+    
+    <script>
+        const url = "https://script.google.com/macros/s/AKfycbz-eh9EvnebMKaPreiU8gMmQb0CoerPINLtUTvwaRkbR0yFmOM_EeZONZMB8HbNdY2T/exec" // enter your public ('access' - 'anyone') deployment URL (NOT test deployment!)
+        document.getElementById('form').action = url;
+
+        // fetching the data from each column in the sheet
+        // then populating the respective datalist
+        fetch(`${url}?header=Name`)
+            .then((response) => response.json())
+            .then(({ data }) => {
+                console.log(data);
+                populateDatalists("customers", data)
+            })
+            .catch((error) => console.error('!!!!!!!!', error));
+
+        fetch(`${url}?header=Email`)
+            .then((response) => response.json())
+            .then(({ data }) => {
+                console.log(data);
+                populateDatalists("phones", data)
+            })
+            .catch((error) => console.error('!!!!!!!!', error));
+        
+        fetch(`${url}?header=Phone`)
+            .then((response) => response.json())
+            .then(({ data }) => {
+                console.log(data);
+                populateDatalists("addresses", data)
+            })
+            .catch((error) => console.error('!!!!!!!!', error));
+
+            fetch(`${url}?header=Message`)
+            .then((response) => response.json())
+            .then(({ data }) => {
+                console.log(data);
+                populateDatalists("addresses", data)
+            })
+            .catch((error) => console.error('!!!!!!!!', error));
+
+        // function to add options to datalists
+        const populateDatalists = (id, arr) => {
+            let result = '';
+            for (const item of arr) {
+                result += `<option value="${item}">`;
+            }
+            document.getElementById(id).innerHTML = result;
+        }
+    </script>
+</body>
+
+
+</html>
